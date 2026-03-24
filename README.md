@@ -1,18 +1,58 @@
-# React + Vite
+# Mi E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una tienda de productos hecha con React + Vite, que consume la API pública [DummyJSON](https://dummyjson.com) para obtener productos y presenta un diseño con cards modernas.
 
-Currently, two official plugins are available:
+## Descripción del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Frontend en React (JSX)
+- Datos de productos obtenidos desde `https://dummyjson.com/products`
+- Características clave:
+  - Precio descontado con precio original tachado
+  - Badge de descuento integrado
+  - Rating con estrellas (desde la API)
+  - Imagen con hover y proporción consistente
+  - Jerarquía visual y legibilidad optimizada
 
-## React Compiler
+## Estructura de carpetas
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- `src/`
+  - `App.jsx`: componente principal y fetch a API
+  - `components/`: componentes reutilizables
+    - `ProductCard/`: tarjeta de producto + estilos
+    - `SearchBar/`: buscador de productos
+    - `CategoryFilter/`: filtro por categoría
+    - `DiscountToggle/`: toggle para mostrar solo descuentos
 
-Note: This will impact Vite dev & build performances.
+## Instalación y ejecución local
 
-## Expanding the ESLint configuration
+1. Clonar el repositorio:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/JeffersonZT/mi-ecommerce.git
+cd mi-ecommerce
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Iniciar servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+4. Abrir en el navegador:
+
+```
+http://localhost:5173
+```
+
+## Capturas de pantalla
+
+1. **Home con listado de productos**
+   ![alt text](screenshots/home.png)
+2. **Product card con descuento y rating**
+   ![alt text](screenshots/product-card.png)
