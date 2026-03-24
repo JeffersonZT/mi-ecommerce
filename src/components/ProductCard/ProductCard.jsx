@@ -13,11 +13,7 @@ export const ProductCard = ({ product }) => {
         else stars.push('☆')
     }
 
-    // como todos los productos tienen descuento se decice al azar si se aplica o no 
-    function randomizeDiscount() {
-        return Math.random() < 0.5 ? 0 : product.discountPercentage
-    }
-    product.discountPercentage = randomizeDiscount()
+
 
     return (
         <div className='productCard'>

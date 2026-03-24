@@ -14,8 +14,16 @@ const App = () => {
     fetch('https://dummyjson.com/products?delay=1000&limit=194&select=title,description,category,price,discountPercentage,thumbnail,rating')
       .then(res => res.json())
       .then(data => {
-        setData(data);
-        const uniqueCategories = [...new Set(data.products.map(product => product.category))];
+        // como todos los productos tienen descueto se decime al azar unos tengan o otrso no
+        const newData = {
+          ...data,
+          products: data.products.map(product => ({
+            ...product,
+            discountPercentage: Math.random() < 0.5 ? 0 : product.discountPercentage
+          }))
+        };
+        setData(newData);
+        const uniqueCategories = [...new Set(newData.products.map(product => product.category))];
         setCategories(uniqueCategories);
       })
       .catch(err => setError(err))
