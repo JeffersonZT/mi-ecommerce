@@ -8,7 +8,7 @@ const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/products?select=title,description,price,discountPercentage,thumbnail')
+    fetch('https://dummyjson.com/products?limit=194&&select=title,description,category,price,discountPercentage,thumbnail,rating')
       .then(res => res.json())
       .then(data => setData(data))
       .catch(err => setError(err))
@@ -20,13 +20,11 @@ const App = () => {
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}
       {data && (
-        <ul>
+        <div className="productsContainer">
           {data.products.map(product => (
-            <li key={product.id}>
-              <ProductCard product={product} />
-            </li>
+            <ProductCard key={product.id} product={product} />
           ))}
-        </ul>
+        </div>
       )}
     </div>
   )
