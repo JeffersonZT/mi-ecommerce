@@ -13,11 +13,19 @@ export const ProductCard = ({ product }) => {
         else stars.push('☆')
     }
 
+    // como todos los productos tienen descuento se decice al azar si se aplica o no 
+    function randomizeDiscount() {
+        return Math.random() < 0.5 ? 0 : product.discountPercentage
+    }
+    product.discountPercentage = randomizeDiscount()
+
     return (
         <div className='productCard'>
             <figure className='productImage'>
                 <img src={product.thumbnail} alt={product.title} />
-                <div className='discount'>-{product.discountPercentage.toFixed(0)}%</div>
+                {product.discountPercentage > 0 && (
+                    <div className='discount'>-{product.discountPercentage.toFixed(0)}%</div>
+                )}
             </figure>
 
             <h2>{product.title}</h2>
@@ -32,7 +40,9 @@ export const ProductCard = ({ product }) => {
             </div>
 
             <div className='priceBlock'>
-                <p className='price'>${product.price.toFixed(2)}</p>
+                {product.discountPercentage > 0 && (
+                    <p className='price'>${product.price.toFixed(2)}</p>
+                )}
                 <p className='total'>${totalPrice.toFixed(2)}</p>
             </div>
         </div>

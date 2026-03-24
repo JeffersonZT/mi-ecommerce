@@ -1,0 +1,75 @@
+.categoryFilter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.categoryFilter label {
+  display: inline-block;
+  color: #a8b5cc;
+  background-color: rgba(161, 177, 211, 0.14);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.categoryFilter select {
+    background-color: transparent;
+    border: 1px solid #5a6c88;
+    color: #5a6c88;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.categoryFilter select:hover {
+    background-color: rgba(161, 177, 211, 0.14);
+    border-color: #a8b5cc;
+    color: #a8b5cc;
+    transition: all 220ms ease;
+}
+
+.categoryFilter select:focus {
+    background-color: rgba(161, 177, 211, 0.14);
+    border-color: #a8b5cc;
+    color: #a8b5cc;
+    outline: none;
+    transition: all 220ms ease;
+}
+
+.categoryFilter select option {
+    background-color: #000000;
+    color: #5a6c88;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.categoryFilter select option:hover {
+    background-color: rgba(161, 177, 211, 0.14);
+    color: #a8b5cc;
+    transition: all 220ms ease;
+}
+
+.categoryFilter select option:focus {
+    background-color: rgba(161, 177, 211, 0.14);
+    color: #000000;
+    outline: none;
+    transition: all 220ms ease;
+}
+
+.categoryFilter select option:checked {
+    background-color: rgba(161, 177, 211, 0.14);
+    color: #000000;
+    transition: all 220ms ease;
+}
