@@ -1,20 +1,21 @@
 .categoryFilter {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
 }
 
 .categoryFilter label {
-  display: inline-block;
-  color: #a8b5cc;
-  background-color: rgba(161, 177, 211, 0.14);
-  font-size: 0.72rem;
-  font-weight: 600;
-  border-radius: 999px;
-  padding: 2px 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  cursor: pointer;
+    display: inline-block;
+    color: #a8b5cc;
+    background-color: rgba(161, 177, 211, 0.14);
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .categoryFilter select {
