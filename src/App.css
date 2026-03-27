@@ -22,7 +22,6 @@ body {
 
 header {
     padding: 1rem;
-    text-align: center;
     background-color: #1e293b;
     color: #f8fafc;
     font-size: 1.5rem;
@@ -30,9 +29,53 @@ header {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1rem;
+
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     gap: 1rem;
+
+    text-align: left;
+}
+
+header > * {
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .searchBar,
+    .categoryFilter,
+    .discountToggle {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .categoryFilter {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .searchBar input[type="text"] {
+        font-size: 0.8rem;
+    }
+
+    .searchBar button,
+    .categoryFilter select,
+    .categoryFilter label,
+    .discountToggle label {
+        font-size: 0.7rem;
+    }
 }
 
