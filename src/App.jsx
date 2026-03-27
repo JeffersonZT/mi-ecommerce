@@ -4,6 +4,7 @@ import { ProductCard } from './components/ProductCard/ProductCard.jsx'
 import { CategoryFilter } from './components/CategoryFilter/CategoryFilter.jsx'
 import { DiscountToggle } from './components/DiscountToggle/DiscountToggle.jsx'
 import { SearchBar } from './components/SearchBar/SearchBar.jsx'
+import { Loading } from './components/Loading/Loading.jsx'
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -36,7 +37,7 @@ const App = () => {
 
   return (
     <div>
-      {loading && <p>Loading...</p>}
+      {loading && <Loading />}
       {error && <p>Error: {error.message}</p>}
       {data && (
         <>

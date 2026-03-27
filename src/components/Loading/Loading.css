@@ -1,0 +1,31 @@
+.loadingOverlay {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  color: #f8fafc;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.loadingSpinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(248, 250, 252, 0.35);
+  border-top-color: #38bdf8;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+.loadingText {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #cbd5e1;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
